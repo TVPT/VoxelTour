@@ -1,0 +1,92 @@
+name: VoxelTour
+main: com.thevoxelbox.tour.VoxelTour
+version: 1.01
+website: http://thevoxelbox.com
+author: Deamon
+description: Tours!
+commands:
+  voxeltour:
+    description: Test
+    usage: |
+           /<command>
+           Example: /<command>
+  createtour:
+    description: creates a new tour
+    usage: |
+           /<command>
+           Example: /<command> <name>
+  setfocus:
+    description: Selects a tour for modification
+    usage: |
+           /<command>
+           Example: /<command> <TourName>
+  deletetour:
+    description: Deletes the specified tour
+    usage: |
+           /<command>
+           Example: /<command> <TourName>
+  addpoint:
+    description: Adds a point to the seletced tour (using your current location)
+    usage: |
+           /<command>
+           Example: /<command> <pointName>
+  deletepoint:
+    description: Deletes the specified point from the seletced tour
+    usage: |
+           /<command>
+           Example: /<command> <pointName>
+  setmessage:
+    description: Sets the message of the last TourPoint placed
+    usage: |
+           /<command>
+           Example: /<command> <message>
+  setmessagebyindex:
+    description: Sets the message of the specified Point (by numerical index)
+    usage: |
+           /<command>
+           Example: /<command> <index> <message>
+  listtours:
+    description: Lists avaliable tours
+    usage: |
+           /<command>
+           Example: /<command>
+  listpoints:
+    description: Lists the points in your selected tour
+    usage: |
+           /<command>
+           Example: /<command>
+  savetours:
+    description: Saves tours; It is suggested to use this after modifing tours incase of server crashes.
+    usage: |
+           /<command>
+           Example: /<command>
+  loadtours:
+    description: Loads tours
+    usage: |
+           /<command>
+           Example: /<command>
+  starttour:
+    description: Starts you on the specified tour
+    usage: |
+           /<command>
+           Example: /<command> <tourName>
+  endtour:
+    description: Ends the tour your currently in
+    usage: |
+           /<command>
+           Example: /<command>
+  nextlocation:
+    description: Takes you to the next location in the tour
+    usage: |
+           /<command>
+           Example: /<command>
+  nextloc:
+    description: Takes you to the next location in the tour
+    usage: |
+           /<command>
+           Example: /<command>
+  nextpoint:
+    description: Takes you to the next location in the tour
+    usage: |
+           /<command>
+           Example: /<command>
