@@ -78,7 +78,7 @@ public class TourHandler {
 	}
 	public void sendPlayerToPoint(TourPoint po, Player p) {
 		p.teleport(po.loc, TeleportCause.PLUGIN);
-		if(!po.message.isEmpty()) p.sendMessage(po.message);
+		if(!po.message.isEmpty()) p.sendMessage(repalceColourCodes(po.message));
 	}
 	public String repalceColourCodes(String s) {
 		return s.replace('&', '§');
