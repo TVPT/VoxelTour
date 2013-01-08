@@ -67,7 +67,7 @@ public class VoxelTour extends JavaPlugin {
     						p.sendMessage(ChatColor.AQUA + "/setmessagebyindex <index> <message> " + ChatColor.DARK_GRAY + "-- Adds a message to the specified point (by numerical index see /listpoints)");
     						p.sendMessage(ChatColor.AQUA + "/deletepoint <point name> " + ChatColor.DARK_GRAY + "-- Deletes the specified point");
     						p.sendMessage(ChatColor.AQUA + "/savetours " + ChatColor.DARK_GRAY + "-- It is recommended you use this after creating a tour incase of server crashes");
-    						p.sendMessage(ChatColor.AQUA + "/loadtours " + ChatColor.DARK_GRAY + "-- Reloads the Tour file");
+    						p.sendMessage(ChatColor.AQUA + "/loadtours " + ChatColor.DARK_GRAY + "-- Reloads the Tour file. " + ChatColor.DARK_RED + "WARNING! Deletes all unsaved tours!");
     					}
     				}
     			}

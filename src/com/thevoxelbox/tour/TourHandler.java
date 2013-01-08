@@ -44,6 +44,7 @@ public class TourHandler {
 			ongoing.get(p.getName()).points.remove(p.getName());
 			ongoing.remove(p.getName());
 			p.sendMessage(ChatColor.AQUA + "We hope you enjoyed your tour!");
+			p.sendMessage(ChatColor.AQUA + "View other avaliable tours using /listtours");
 			return true;
 		}
 		return false;
