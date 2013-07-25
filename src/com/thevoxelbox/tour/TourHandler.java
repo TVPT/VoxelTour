@@ -173,7 +173,6 @@ public class TourHandler {
 				Iterator<JSONObject> points_iterator = points.iterator();
 				while (points_iterator.hasNext()) {
 					JSONObject pointObject = (JSONObject) points_iterator.next();
-					System.out.println("WorldName: " + pointObject.get("world").toString());
 					Location loc = new Location(p.getWorld(pointObject.get("world").toString()), Long.parseLong(pointObject.get("x").toString()),Long.parseLong(pointObject.get("y").toString()),Long.parseLong(pointObject.get("z").toString()));
 					TourPoint point = new TourPoint((String) pointObject.get("name"), loc, tour.pointList.size());
 					point.setMessage((String) pointObject.get("message"));

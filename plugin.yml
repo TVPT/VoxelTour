@@ -1,10 +1,10 @@
 name: VoxelTour
 main: com.thevoxelbox.tour.VoxelTour
-version: 1.01
+version: 1.04
 website: http://thevoxelbox.com
 author: Deamon
 description: Tours!
-softdepend: [MyWorlds]
+softdepend: [My Worlds]
 commands:
   voxeltour:
     description: Test

@@ -58,7 +58,7 @@ public class VoxelTour extends JavaPlugin {
     					p.sendMessage(ChatColor.AQUA + "/nextlocation " + ChatColor.DARK_GRAY + "-- Takes you to the next location in your tour!");
     					p.sendMessage(ChatColor.AQUA + "/endtour " + ChatColor.DARK_GRAY + "-- Ends your tour and takes you back to where you started!");
     					p.sendMessage(ChatColor.AQUA + "/listpoints " + ChatColor.DARK_GRAY + "-- Lists the points in your seletced tour!");
-    					if(p.isOp()) {
+    					if(p.hasPermission("voxeltour.admin")) {
     						p.sendMessage(ChatColor.AQUA + "/createtour <tour name> " + ChatColor.DARK_GRAY + "-- Creates a new tour");
     						p.sendMessage(ChatColor.AQUA + "/deletetour <tour name> " + ChatColor.DARK_GRAY + "-- Deletes a new tour");
     						p.sendMessage(ChatColor.AQUA + "/setfocus <tour name> " + ChatColor.DARK_GRAY + "-- Places a tour into your working slot");
@@ -106,7 +106,7 @@ public class VoxelTour extends JavaPlugin {
     	if(commandName.equals("createtour") && args.length == 1) {
     		if(sender instanceof Player) {
     			Player p = (Player) sender;
-    			if(p.isOp()) {
+    			if(p.hasPermission("voxeltour.admin")) {
     				tourHandler.createTour(args[0], p);
 	    			p.sendMessage(ChatColor.AQUA + "Tour " + args[0] + " created!");
 	    			return true;
@@ -118,7 +118,7 @@ public class VoxelTour extends JavaPlugin {
     	if(commandName.equals("setfocus") && args.length == 1) {
     		if(sender instanceof Player) {
     			Player p = (Player) sender;
-    			if(p.isOp()) {
+    			if(p.hasPermission("voxeltour.admin")) {
     				if(tourHandler.setFocus(args[0], p)) {
 	    				p.sendMessage(ChatColor.AQUA + "Tour " + args[0] + " selected!");
 	    			} else {
@@ -135,7 +135,7 @@ public class VoxelTour extends JavaPlugin {
     	if(commandName.equals("deletetour") && args.length == 1) {
     		if(sender instanceof Player) {
     			Player p = (Player) sender;
-    			if(p.isOp()) {
+    			if(p.hasPermission("voxeltour.admin")) {
     	    		if(tourHandler.deleteTour(args[0])) {
 	    				p.sendMessage(ChatColor.AQUA + "Tour " + args[0] + " deleted!");
 	    			} else {
@@ -152,7 +152,7 @@ public class VoxelTour extends JavaPlugin {
     	if(commandName.equals("addpoint") && args.length == 1) {
     		if(sender instanceof Player) {
     			Player p = (Player) sender;
-    			if(p.isOp()) {
+    			if(p.hasPermission("voxeltour.admin")) {
     	    		if(!(tourHandler.focus.get(p.getName()) == null)) {
 	    				tourHandler.focus.get(p.getName()).addPoint(args[0], p.getLocation());
 	    				p.sendMessage(ChatColor.AQUA + "Point " + args[0] + " created!");
@@ -169,7 +169,7 @@ public class VoxelTour extends JavaPlugin {
     	if(commandName.equals("deletepoint") && args.length == 1) {
     		if(sender instanceof Player) {
     			Player p = (Player) sender;
-    			if(p.isOp()) {
+    			if(p.hasPermission("voxeltour.admin")) {
     				if(!(tourHandler.focus.get(p.getName()) == null)) {
 		    			if(tourHandler.focus.get(p.getName()).removePoint(args[0])) {
 		    				p.sendMessage(ChatColor.AQUA + "Point " + args[0] + " deleted!");
@@ -189,7 +189,7 @@ public class VoxelTour extends JavaPlugin {
     	if(commandName.equals("setmessage") && args.length > 0) {
     		if(sender instanceof Player) {
     			Player p = (Player) sender;
-    			if(p.isOp()) {
+    			if(p.hasPermission("voxeltour.admin")) {
     				String _args = "";
 	    			for(String s: args) {
 	    				_args += s;
@@ -215,7 +215,7 @@ public class VoxelTour extends JavaPlugin {
     	if(commandName.equals("setmessagebyindex") && args.length > 1) {
     		if(sender instanceof Player) {
     			Player p = (Player) sender;
-    			if(p.isOp()) {
+    			if(p.hasPermission("voxeltour.admin")) {
     				int index = 0;
 	    			if(!(tourHandler.focus.get(p.getName()) == null)) {
 						if(!(tourHandler.focus.get(p.getName()).pointList.isEmpty())) {
@@ -291,7 +291,7 @@ public class VoxelTour extends JavaPlugin {
     	if(commandName.equals("savetours") && args.length == 0) {
     		if(sender instanceof Player) {
     			Player p = (Player) sender;
-    			if(p.isOp()) {
+    			if(p.hasPermission("voxeltour.admin")) {
     				if(tourHandler.saveTours()) {
 	    				p.sendMessage(ChatColor.AQUA + "Save successful!");
 	    			} else {
@@ -309,7 +309,7 @@ public class VoxelTour extends JavaPlugin {
     	if(commandName.equals("loadtours") && args.length == 0) {
     		if(sender instanceof Player) {
     			Player p = (Player) sender;
-    			if(p.isOp()) {
+    			if(p.hasPermission("voxeltour.admin")) {
     				if(tourHandler.loadTours(s)) {
 	    				p.sendMessage(ChatColor.AQUA + "Load successful!");
 	    			} else {
