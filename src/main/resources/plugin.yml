@@ -1,8 +1,8 @@
-name: VoxelTour
+name: ${project.name}
 main: com.thevoxelbox.tour.VoxelTour
-version: 1.04
-website: http://thevoxelbox.com
-author: Deamon
+version: ${project.build.version}
+website: ${project.url}}
+authors: [Deamon5550]
 description: Tours!
 softdepend: [My Worlds]
 commands:

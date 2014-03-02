@@ -82,7 +82,7 @@ public class TourHandler {
 		if(!po.message.isEmpty()) p.sendMessage(repalceColourCodes(po.message));
 	}
 	public String repalceColourCodes(String s) {
-		return s.replace('&', '§');
+		return ChatColor.translateAlternateColorCodes('&', s);
 	}
 
 	public void createTour(String name, Player p) {
